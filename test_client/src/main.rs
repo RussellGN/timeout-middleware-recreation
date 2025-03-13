@@ -10,7 +10,9 @@ async fn main() {
     let app = Router::new()
         .route("/", get(sleep_handler))
         .layer(TraceLayer::new_for_http())
-        .layer(CorsLayer::very_permissive());
+        .layer(CorsLayer::very_permissive())
+        // .layer(ServiceBuilder::new().timeout(Duration::from_secs(2)))
+        ;
 
     let listener = TcpListener::bind("127.0.0.1:3000").await.unwrap();
     println!(
