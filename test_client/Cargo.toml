@@ -8,5 +8,5 @@ axum = "0.8.1"
 custom_timeout = { path = "../custom_timeout"}
 tokio = { version = "1.44.0", features = ["full"] }
 tower = "0.5.2"
-tower-http = "0.6.2"
+tower-http = { version = "0.6.2", features = ["cors", "trace"] }
 tracing-subscriber = "0.3.19"
