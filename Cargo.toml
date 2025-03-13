@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+
+members = [
+   "test_client","custom_timeout"
+]
