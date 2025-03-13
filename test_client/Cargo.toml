@@ -4,4 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+axum = "0.8.1"
 custom_timeout = { path = "../custom_timeout"}
+tokio = { version = "1.44.0", features = ["full"] }
+tower = "0.5.2"
+tower-http = "0.6.2"
+tracing-subscriber = "0.3.19"
